@@ -1,0 +1,74 @@
+.test-page-container {
+    background-color: #ffffff; /* White background for better contrast */
+    padding: 30px; /* Increased padding */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for depth */
+    margin: 20px; /* Margin around the container */
+}
+
+h1 {
+    font-size: 2.5rem; /* Title font size */
+    color: #2c3e50; /* Darker shade for title */
+    margin-bottom: 20px; /* Space below title */
+    text-align: center; /* Centered title */
+}
+
+h3 {
+    font-size: 1.8rem; /* Slightly larger section headings */
+    color: #34495e; /* Lighter shade for section headings */
+    margin-bottom: 15px; /* Space below section headings */
+}
+
+.text-right {
+    font-size: 1.25rem; /* Timer font size */
+    color: #e74c3c; /* Red color for timer */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.mb-4 {
+    margin-bottom: 2rem; /* Consistent bottom margin */
+}
+
+li {
+    background-color: #f1f1f1; /* Light gray background for list items */
+    border-radius: 8px; /* Rounded corners for list items */
+    padding: 15px; /* Padding inside list items */
+    margin-bottom: 15px; /* Space between list items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+li:hover {
+    background-color: #e1e1e1; /* Darker gray on hover */
+}
+
+button {
+    font-size: 1.1rem; /* Button font size */
+    padding: 10px 20px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+select {
+    margin-bottom: 15px; /* Space below the language selector */
+    padding: 10px; /* Padding for select */
+    border-radius: 5px; /* Rounded corners for select */
+    border: 1px solid #ced4da; /* Border color */
+}
+
+.alert {
+    margin-top: 20px; /* Space above alerts */
+}
+
+.output-container {
+    background-color: #f8f9fa; /* Light gray background for output */
+    padding: 10px; /* Padding for output area */
+    border-radius: 5px; /* Rounded corners for output area */
+    margin-top: 10px; /* Space above output area */
+    border: 1px solid #ced4da; /* Border for output area */
+}
