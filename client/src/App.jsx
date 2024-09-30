@@ -2,18 +2,18 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/clerk-react'; // Use RedirectToSignIn for automatic redirects
 import './App.css';
-import LandingPage from './Pages/Landingpage';
-import Dashboard from './Pages/Dashboard';
-import Header from './Components/Header';
-import CreateTest from './Pages/CreateTest';
-import StudentList from './Pages/StudentList';
-import TestResults from './Pages/TestResults';
-import WorkInProgress from './Pages/WorkInProgress';
-import TestPage from './Pages/TestPage';
-import Disqualified from './Pages/Disqualified';
-import SubmissionPage from './Pages/SubmissionPage';
-import Footer from './Components/Footer';
-import ThankYouPage from './Pages/thank-you';
+import LandingPage from './Pages/Landingpage.jsx';
+import Dashboard from './Pages/Dashboard.jsx';
+import Header from './Components/Header.jsx';
+import CreateTest from './Pages/CreateTest.jsx';
+import StudentList from './Pages/StudentList.jsx';
+import TestResults from './Pages/TestResults.jsx';
+import WorkInProgress from './Pages/WorkInProgress.jsx';
+import TestPage from './Pages/TestPage.jsx';
+import Disqualified from './Pages/Disqualified.jsx';
+import SubmissionPage from './Pages/SubmissionPage.jsx';
+import Footer from './Components/Footer.jsx';
+import ThankYouPage from './Pages/thank-you.jsx';
 const App = () => {
   return (
     <Router>
