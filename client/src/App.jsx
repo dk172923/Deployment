@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/clerk-react'; // Use RedirectToSignIn for automatic redirects
 import './App.css';
-import LandingPage from './Pages/Landingpage.jsx';
+import LandingPage from './Pages/LandingPage.jsx';
 import Dashboard from './Pages/Dashboard.jsx';
 import Header from './Components/Header.jsx';
 import CreateTest from './Pages/CreateTest.jsx';
