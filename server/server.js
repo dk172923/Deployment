@@ -40,6 +40,12 @@ app.use('/api/tests', testRoutes);
 app.use('/api/invite', inviteRouter);
 //app.use('/api/results', resultsRoutes);
 
+
+//testing
+app.get("/", async(req, res, next) => {
+  return res.send("Hey...");
+});
+
 // Endpoint to evaluate subjective answers
 app.post('/api/evaluate-answer', async (req, res) => {
   const { question, answer } = req.body;
