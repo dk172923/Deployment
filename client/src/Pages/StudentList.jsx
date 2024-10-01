@@ -9,7 +9,7 @@ const StudentList = () => {
   useEffect(() => {
     const fetchInvitedStudents = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/invited-students'); 
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/invited-students`); 
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -22,7 +22,7 @@ const StudentList = () => {
 
     const fetchTests = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/tests'); 
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/tests`); 
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

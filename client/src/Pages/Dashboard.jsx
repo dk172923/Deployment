@@ -13,7 +13,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     const fetchTests = async () => {
-      const response = await fetch('http://localhost:5000/api/tests');
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/tests`);
       const data = await response.json();
       setTests(data);
     };
@@ -75,7 +75,7 @@ const Dashboard = () => {
       // Do not close the modal until CSV processing is complete
     } else {
       // Send invitation for individual student
-      const response = await fetch('http://localhost:5000/api/invite', {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/invite`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ testId: selectedTestId, email, name })
@@ -96,7 +96,7 @@ const Dashboard = () => {
 
   // Example function to send individual invitations
   const sendInvitation = async (name, email) => {
-    const response = await fetch('http://localhost:5000/api/invite', {
+    const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/invite`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ testId: selectedTestId, name, email }),

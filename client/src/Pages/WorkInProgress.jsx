@@ -54,7 +54,7 @@ const WorkInProgress = () => {
       setShowInstructions(false);
 
       // Verify if the student is invited to the test
-      const verifyResponse = await fetch('http://localhost:5000/api/invite/verify', {
+      const verifyResponse = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/invite/verify`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -69,7 +69,7 @@ const WorkInProgress = () => {
       // Check if the student is invited
       if (verifyData.invited === true) {
         // Fetch the results to see if the student has already taken the test
-        const resultResponse = await fetch(`http://localhost:5000/api/results/check`, {
+        const resultResponse = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/results/check`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -87,7 +87,7 @@ const WorkInProgress = () => {
           setModalMessage('You can only attend the test once. You have already submitted your answers.');
         } else {
           // If they have not attended the test, proceed to the test page
-          const response = await fetch(`http://localhost:5000/api/tests/${testId}`);
+          const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/tests/${testId}`);
           if (!response.ok) {
             throw new Error('Failed to fetch test details');
           }

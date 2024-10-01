@@ -28,7 +28,7 @@ const TestPage = () => {
   useEffect(() => {
     const fetchTestDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/tests/${testId}`);
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/tests/${testId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch test details');
         }
@@ -131,7 +131,7 @@ const TestPage = () => {
           }
         } else if (question.type === 'subjective') {
           const userAnswer = answers[question._id];
-          const response = await fetch('http://localhost:5000/api/evaluate-answer', {
+          const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/evaluate-answer`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ question: question.question, answer: userAnswer }),
@@ -176,7 +176,7 @@ const TestPage = () => {
       };
 
       try {
-        const response = await fetch('http://localhost:5000/api/results', {
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/results`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(finalResults),

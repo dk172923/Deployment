@@ -8,7 +8,7 @@ const TestResults = () => {
   useEffect(() => {
     const fetchTestResults = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/results'); // Update the URL as needed
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/results`); // Update the URL as needed
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
