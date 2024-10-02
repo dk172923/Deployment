@@ -20,10 +20,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({
-    origin: 'https://deployment-client.vercel.app/', // or the domain your frontend is hosted on
-    methods: ['GET', 'POST']
-  }));
+app.use(cors());
   
 app.use(json());
 
