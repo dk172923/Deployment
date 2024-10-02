@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
         }
 
         // Generate an invite link for the student
-        const inviteLink = `http://localhost:5173/test/${testId}/attend`;
+        const inviteLink = `https://deployment-client.vercel.app/test/${testId}/attend`;
 
         // Setup nodemailer to send the email
         const transporter = nodemailer.createTransport({

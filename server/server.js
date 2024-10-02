@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:5173', // or the domain your frontend is hosted on
+    origin: 'https://deployment-client.vercel.app/', // or the domain your frontend is hosted on
     methods: ['GET', 'POST']
   }));
   
