@@ -168,7 +168,7 @@ app.post('/api/results/check', async (req, res) => {
 // Set up multer for file uploads
 const upload = multer();
 
-app.post('/send-pdf', upload.single('file'), async (req, res) => {
+app.post('/api/send-pdf', upload.single('file'), async (req, res) => {
   const { email, testId } = req.body; // Extract email and testId from the request body
   const pdfBuffer = req.file ? req.file.buffer : null; // Get the PDF buffer from the request
     if (!pdfBuffer) {
