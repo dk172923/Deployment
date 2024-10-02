@@ -83,7 +83,7 @@ const SubmissionPage = () => {
 
     // Send the PDF to the backend
     try {
-          await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/send-pdf`, {
+          await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/send-pdf`, {
               method: 'POST',
               body: formData,
           });
