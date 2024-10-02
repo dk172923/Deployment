@@ -96,7 +96,7 @@ const Dashboard = () => {
 
   // Example function to send individual invitations
   const sendInvitation = async (name, email) => {
-    const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/invite`, {
+    const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}api/invite`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ testId: selectedTestId, name, email }),
